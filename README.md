@@ -13,7 +13,7 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 2. Open a command prompt inside the folder
 3. Type the following command `npm i`
 4. Open the config.json file and fill it out
-* account
+* account:
   * username: The username of the account you are using
   * password: The password of the account you are using
   * sharedSecret: A string of letters, symbols and numbers that generate Steam Guard codes for you. Not required but highly recommended.
