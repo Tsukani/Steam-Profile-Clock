@@ -6,7 +6,7 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 * Your Steam account must be level 10 or higher.
 * A server (VPS/RDP) is highly recommended but not required. Having the clock run 24/7 requires the application to be open at all times.
 * The account's `sharedSecret` is highly recommended if the account uses Steam Mobile Authenticator. It is not required but makes sure that the clock will continue in case the session expires.
-* The `profileData script` which can be found [here](https://github.com/Tsukani/Steam-Profile-Clock#profiledata-script).
+* The `profileData Script` which can be found [here](https://github.com/Tsukani/Steam-Profile-Clock#profiledata-script).
 
 ## Installation
 1. Download the application [here](https://github.com/Tsukani/Steam-Profile-Clock/archive/master.zip) and extract it to a folder
