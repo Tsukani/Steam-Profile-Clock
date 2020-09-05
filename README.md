@@ -18,7 +18,7 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
   * password: The password of the account you are using
   * sharedSecret: A string of letters, symbols and numbers that generate Steam Guard codes for you. Not required but highly recommended.
 * profileData: The string you acquired from the profileData ([here](https://github.com/Tsukani/Steam-Profile-Clock#profiledata-script))
-* steamID64: The steamID64 of your account. You can find it on steamid.io
+* steamID64: The steamID64 of your account. You can find it on [steamid.io](https://steamid.io)
 * time12Hours: A boolean that decides if you want 24-hour (false) or 12-hour (true) time
 * centerTime: A boolean that decides if you want non-centered (false) or centered (true) time
 5. Lastly, type the following command to start the application `node .`
