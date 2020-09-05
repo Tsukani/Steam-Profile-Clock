@@ -1,0 +1,11 @@
+{
+    "account": {
+        "username": "",
+        "password": "",
+        "sharedSecret": ""
+    },
+    "profileData": "",
+    "steamID64": "",
+    "time12Hours": true,
+    "centerTime": true
+}
