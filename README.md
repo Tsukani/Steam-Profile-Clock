@@ -29,10 +29,12 @@ To ensure that your profile will display the correct showcases a custom script i
 
 `function profileData() { $J("input[name='rgShowcaseConfig[8][0][title]']").val("TIMEHERE"); formData = new FormData(document.querySelector('form')); var arr = []; for (var pair of formData.entries()) { arr.push(pair[0]+ '=' + pair[1]); } arr.push('type=showcases', 'sessionID=SESID', 'json=1'); window.prompt("Replace profileData with the following data:\n(CTRL + A & CTRL + C)", arr.join("&").replace(/\r?\n/g, "\\n")); } $J(".profileedit_SaveCancelButtons_2KJ8a").append('<button type="button" class="DialogButton _DialogLayout Primary" onclick="profileData()">Copy profileData</button>');`
 
-2. Visit your Featured Showcase edit page of your profile in a web browser ([here](https://steamcommunity.com/my/edit/showcases))
+2. Visit the Featured Showcase edit page of your profile in a web browser ([here](https://steamcommunity.com/my/edit/showcases))
 3. Open the developer console
     * `CTRL + Shift + J` for most browsers
     * `CTRL + Shift + K` for FireFox (Typing allow pasting is required to paste)
 4. Paste the entire script into the console and hit `enter`
 5. Next to the Save and Cancel button a new button titled `Copy profileData` should appear. Once you are happy with your showcases (MUST INCLUDE A CUSTOM INFO BOX) press the new button
 6. A dialog box should appear. Copy the contents of it and paste it into your config file on the `profileData` line between the quotation marks
+
+(You are required to follow these steps if you wish to update your profile while running this script since it will automatically reset it back to the previous layout)
