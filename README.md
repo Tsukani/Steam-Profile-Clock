@@ -35,4 +35,4 @@ To ensure that your profile will display the correct showcases a custom script i
     * `CTRL + Shift + K` for FireFox (Typing allow pasting is required to paste)
 4. Paste the entire script into the console and hit `enter`
 5. Next to the Save and Cancel button a new button titled `Copy profileData` should appear. Once you are happy with your showcases (MUST INCLUDE A CUSTOM INFO BOX) press the new button
-6. A dialog box should appear. Copy the content of it and paste it into your config file on the `profileData` line between the quotation marks
+6. A dialog box should appear. Copy the contents of it and paste it into your config file on the `profileData` line between the quotation marks
