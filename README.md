@@ -27,7 +27,7 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 To ensure that your profile will display the correct showcases a custom script is required to gather the showcase information on your profile.
 1. Copy the script into your clipboard:
 
-`function profileData() { $J("input[name='rgShowcaseConfig[8][0][title]']").val("TIMEHERE"); formData = new FormData(document.querySelector('form')); var arr = []; for (var pair of formData.entries()) { arr.push(pair[0]+ '=' + pair[1]); } arr.push('type=showcases', 'sessionID=SESID', 'json=1'); window.prompt("Replace profileData with the following data:\n(CTRL + A & CTRL + C)", arr.join("&").replace(/\r?\n/g, "\\n")); } $J(".profileedit_SaveCancelButtons_2KJ8a").append('<button type="button" class="DialogButton _DialogLayout Primary" onclick="profileData()">Copy profileData</button>');`
+`function profileData() {$J("input[name='rgShowcaseConfig[8][0][title]']").val("TIMEHERE");formData = new FormData(document.querySelector('form'));var arr = [];for (var pair of formData.entries()) {arr.push(pair[0]+ '=' + pair[1]);}arr.push('type=showcases', 'sessionID=SESID', 'json=1');window.prompt("Replace profileData with the following data:\n(CTRL + A & CTRL + C)", arr.join("&").replace(/\r?\n/g, "\\n").replace(/"/g, '\\"'));}$J(".profileedit_SaveCancelButtons_2KJ8a").append('<button type="button" class="DialogButton _DialogLayout Primary" onclick="profileData()">Copy profileData</button>');`
 
 2. Visit the Featured Showcase edit page of your profile in a web browser ([here](https://steamcommunity.com/my/edit/showcases))
 3. Open the developer console
