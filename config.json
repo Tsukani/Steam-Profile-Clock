@@ -6,6 +6,7 @@
     },
     "profileData": "",
     "steamID64": "",
-    "time12Hours": true,
-    "centerTime": true
+    "time12Hours": false,
+    "centerTime": false,
+    "timezoneOffset": 0
 }

@@ -9,12 +9,13 @@ const client = new SteamUser();
 const logOnOptions = {
   accountName: config.account.username,
   password: config.account.password,
-  twoFactorCode: SteamTotp.generateAuthCode(config.account.sharedSecret)
+  twoFactorCode: SteamTotp.generateAuthCode(config.account.sharedSecret),
+  rememberPassword: true
 };
 
 console.log("\x1b[36m%s\x1b[0m", "Steam digital clock showcase\nMade by Tsukani/zyN\nMake sure to read through the documentation first to ensure everything is set up correctly!\n");
 console.log("\x1b[33m%s\x1b[0m", `Using ${config.time12Hours ? "12" : "24"} hour ${config.centerTime ? "centered" : "non-centered"} time format.`);
-if (!config.account.sharedSecret) console.log("\x1b[31m%s\x1b[0m", "Including your sharedSecret is highly recommended to avoid unexpected problems regarding sessions and the script stopping unexpectedly.");
+if (config.timezoneOffset) console.log("\x1b[33m%s\x1b[0m", `Using a ${config.timezoneOffset} hour offset.`);
 
 //Login
 client.logOn(logOnOptions);
@@ -45,6 +46,7 @@ client.on("webSession", function(sessionID, cookies) {
 //Main function
 function clock(sessionID, cookies) {
     d = new Date();
+    d.setHours(d.getHours() + config.timezoneOffset);
     time = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", hour12: config.time12Hours});
     try {
         //Centered Time
