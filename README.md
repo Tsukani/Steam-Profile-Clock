@@ -5,7 +5,6 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 * [Node.js](https://nodejs.org/en/) is required to run the application. `Current` version is recommended.
 * Your Steam account must be level 10 or higher.
 * A server (VPS/RDP) is highly recommended but not required. Having the clock run 24/7 requires the application to be open at all times.
-* The account's `sharedSecret` is highly recommended if the account uses Steam Mobile Authenticator. It is not required but makes sure that the clock will continue in case the session expires.
 * The `profileData Script` which can be found [here](https://github.com/Tsukani/Steam-Profile-Clock#profiledata-script).
 
 ## Installation
@@ -16,11 +15,12 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 * account:
   * username: The username of the account you are using
   * password: The password of the account you are using
-  * sharedSecret: A string of letters, symbols and numbers that generate Steam Guard codes for you. Not required but highly recommended.
+  * sharedSecret: A string of letters, symbols and numbers that generate Steam Guard codes for you. Can be found with a rooted/jailbroken phone or inside the maFile if you are using SDA. Not required.
 * profileData: The string you acquired from the profileData ([here](https://github.com/Tsukani/Steam-Profile-Clock#profiledata-script))
 * steamID64: The steamID64 of your account. You can find it on [steamid.io](https://steamid.io)
 * time12Hours: A boolean that decides if you want 24-hour (false) or 12-hour (true) time
 * centerTime: A boolean that decides if you want non-centered (false) or centered (true) time
+* timezoneOffset: An integer that offsets the displayed time (for use on servers with different timezone). Can be positive and negative values; leave as 0 for local machine's timezone.
 5. Lastly, type the following command to start the application `node .`
 
 ## profileData Script
