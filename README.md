@@ -20,7 +20,7 @@ Allows you to add a digital clock to your Steam Community profile using a `Custo
 * steamID64: The steamID64 of your account. You can find it on [steamid.io](https://steamid.io)
 * time12Hours: A boolean that decides if you want 24-hour (false) or 12-hour (true) time
 * centerTime: A boolean that decides if you want non-centered (false) or centered (true) time
-* timezoneOffset: An integer that offsets the displayed time (for use on servers with different timezone). Can be positive and negative values; leave as 0 for local machine's timezone
+* timezoneOffset: An integer that offsets the displayed time (for use on servers with different timezones). Can be positive and negative values; leave as 0 for local machine's timezone
 5. Lastly, type the following command to start the application `node .`
 
 ## profileData Script
