@@ -77,6 +77,11 @@ function clock(sessionID, cookies) {
                 }
             } else {
                 console.log("\x1b[31m%s\x1b[0m", `[${time}] Failed to load showcase status. Status code: ${response.statusCode}`);
+                if (steamResponse.statusCode == 302) {
+                  console.log(colors.yellow, `Steam session has expired. Relogging...`);
+                  clearInterval(updateInterval);
+                  return client.relog();
+                }
             }
         });
     } catch(e){console.log("\x1b[36m%s\x1b[0m", `An error occured: ${e}`);}
